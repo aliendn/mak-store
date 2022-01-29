@@ -1,0 +1,55 @@
+{% load static %}
+{% load render_partial %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>servin-ecommerce bootstrap 5 html template</title>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.rtl.min.css' %}">
+        <!--refrence carousel-->
+        <link rel="stylesheet" href="{% static 'css/owlcarousel/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owlcarousel/owl.theme.default.min.css' %}">
+        <!--refrence carousel-->
+        <link rel="stylesheet" href= "{%static 'css/style.css' %}">
+        <link rel="stylesheet" href="{%static 'css/all.min.css'%}">
+        <link rel="stylesheet" href="{%static 'css/respansive.css'%}">
+        <link rel="stylesheet" href="{%static 'css/animate.min.css'%}">
+    </head>
+
+    <header>
+        <div class="wrapper">
+            <div class="header">
+                {% comment %} {% render_partial "header" %} {% endcomment %}
+                {% block header %}{% include "header.html" %}{% endblock header %}
+            </div>
+            <div>
+    </header>
+
+    <body>
+                <div class="content">
+                    {% block content %}
+                      
+                    {% endblock content %}
+                </div>
+                <div id="footer">
+                    {% block footer %}
+                        {% include 'footer.html' %}
+                    {% endblock footer %}
+                </div>
+            </div>
+        </div>
+        <a class="scrollTo scroll-To-top" href=".topbar-site"></a>
+        <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <!--refrence carousel-->
+        <script src="{% static 'js/carousel/owl.carousel.min.js' %}"></script>
+        <!--refrence carousel-->
+        <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/wow.min.js' %}"></script>
+        {% block index_ref %}{% endblock index_ref %}
+    </body>
+
+</html>
