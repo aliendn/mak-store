@@ -1,1 +1,1 @@
-# mak-store
+# this project is on developing
